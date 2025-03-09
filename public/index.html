@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- ===============================================-->
+  <!--    Document Title-->
+  <!-- ===============================================-->
+  <title>Productly | Design Agency Landing Page UI</title>
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===============================================-->
+  <!--    Favicons-->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.png">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->
+  <link href="assets/css/theme.css" rel="stylesheet" />
+
+</head>
+
+<style>
+  body {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .form-container {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  input,
+  select,
+  .button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background: #0056b3;
+  }
+
+  table {
+    width: max-content;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background: #007bff;
+    color: white;
+  }
+
+  #locationStatus {
+    font-size: 14px;
+    color: green;
+  }
+
+  label {
+    margin-bottom: 0 !important;
+  }
+
+  input {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  select {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow: scroll !important;
+  }
+
+  tr {
+    border-bottom: #ccc solid 1px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  tr.paid {
+    background-color: #00ff3c !important;
+  }
+
+  tr.partially-paid {
+    background-color: #fff3cd !important;
+  }
+
+  tr.not-paid {
+    background-color: #f8d7da !important;
+  }
+
+  /* select options */
+  .optionred {
+    background-color: red;
+  }
+
+  .optiongreen {
+    background-color: green;
+  }
+
+  .optiongold {
+    background-color: gold;
+  }
+
+  .nameDiv {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+</style>
+
+<body>
+
+  <!-- ===============================================-->
+  <!--    Main Content-->
+  <!-- ===============================================-->
+  <main class="main" id="top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container p-0"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" height="31"
+            alt="logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"> </span></button>
+        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#feature">Product</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#validation">Customers</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#superhero">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#marketing">Resources</a></li>
+          </ul> -->
+          <div class="d-flex ms-lg-4"><a class="btn btn-secondary-outline" href="#!">Create Note</a><a
+              class="btn btn-warning ms-3" href="#!">View all Notes</a></div>
+        </div>
+      </div>
+    </nav>
+    <section class="pt-1">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-md-start text-center py-6">
+            <h1 class="fs-6 fw-bold">ORDER TRACKING SYSTEM</h1>
+          </div>
+          <div class="col-md-6 text-end" style="z-index: -99; position: absolute;top: -4%;"><img
+              class="pt-7 pt-md-0 img-fluid" src="assets/img/hero/hero-img.png" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <h2 class="mt-10 mb-4">Add New Order</h2>
+    <div class="form-container">
+      <form id="orderForm">
+
+        <input type="hidden" id="editIndex">
+
+        <div class="nameDiv">
+          <div style="width: 50%;">
+            <label for="sellerName">Brand Ambassador:</label>
+            <input type="text" id="sellerName" required>
+          </div>
+
+          <div style="width: 50%;">
+            <label for="clientName">Client Name:</label>
+            <input type="text" id="clientName">
+          </div>
+
+        </div>
+
+        <label for="shopName">Shop Name:</label>
+        <input type="text" id="shopName" required>
+
+        <div class="nameDiv mb-2">
+          <div>
+            <label for="area">Area:</label>
+            <input type="text" id="area" required>
+          </div>
+
+          <div>
+            <label for="clientPhone">Client Phone:</label>
+            <input type="tel" id="clientPhone" required>
+          </div>
+        </div>
+
+
+        <label for="product">Product:</label>
+        <input type="text" id="product" min="10" required>
+
+        <div class="nameDiv">
+          <div style="width: 50%;">
+            <label for="dateAcquired">Date Acquired</label>
+            <input type="date" id="dateAcquired">
+          </div>
+
+          <div style="width: 50%;">
+            <label for="dateOfDelivery">Expected Delivery</label>
+            <input type="date" id="dateOfDelivery">
+          </div>
+        </div>
+
+
+        <div class="nameDiv">
+          <div style="width: 50%;">
+            <label for="quantity">Bales:</label>
+            <input type="number" id="quantity" min="1" required>
+          </div>
+
+          <div style="width: 50%;">
+            <label for="price">Total Price:</label>
+            <input type="number" id="price" min="1" required>
+          </div>
+        </div>
+
+        <label for="amountPaid">Amount Paid</label>
+        <input type="number" id="amountPaid" min="0">
+
+        <label for="status">Status:</label>
+        <select id="status">
+          <option value="Pending" class="optionred">Pending</option>
+        </select>
+
+        <button type="button" class="button" onclick="getLocation()">Get Location</button>
+        <p id="locationStatus">Location not set</p>
+
+        <button type="submit" class="button">Add Order</button>
+      </form>
+    </div>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <div class="filter-container">
+      <h2>Filter Orders</h2>
+      <input type="text" id="filterAmbassador" placeholder="Filter by Ambassador">
+      <input type="text" id="filterShop" placeholder="Filter by Shop Name">
+      <input type="text" id="filterLocation" placeholder="Filter by Location">
+      <input type="text" id="filterBalance" placeholder="Filter by Balance (e.g. >0)">
+      <input type="text" id="filterPhone" placeholder="Filter by Phone">
+      <input type="text" id="filterClient" placeholder="Filter by Client Name">
+      <select id="filterStatus">
+        <option value="">Filter by Status</option>
+        <option value="Not Paid, pending">Not paid,Pending</option>
+        <option value="Delivered">Delivered</option>
+        <option value="Partially Paid">Partially Paid</option>
+        <option value="Paid">Paid</option>
+      </select>
+      <input type="date" id="filterDate" placeholder="Filter by Delivery Date">
+
+      <div class="d-flex" style="flex-direction: row; gap: 15px;">
+        <button type="submit" class="button" onclick="applyFilters()">Apply Filters</button>
+        <button type="submit" class="button" onclick="resetFilters()">Reset</button>
+      </div>
+
+    </div>
+
+    <div class="prediction-container">
+      <h2>Clients who may need restocking</h2>
+      <ul id="restockList"></ul>
+    </div>
+
+
+    <h2 class="mt-6 mb-4">Orders List</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr style="font-weight: 500;">
+            <th>Ambassador</th>
+            <th>Product</th>
+            <th>Shop</th>
+            <th>Location</th>
+            <th>Bale</th>
+            <th>Price</th>
+            <th>Balance</th>
+            <th>Amount Paid</th>
+            <th>Phone</th>
+            <th>Client</th>
+            <th>Status</th>
+            <th>Date Acquired</th>
+            <th>Delivery Date</th>
+          </tr>
+        </thead>
+        <tbody id="orderTable"></tbody>
+      </table>
+    </div>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+  </main>
+  <!-- ===============================================-->
+  <!--    End of Main Content-->
+  <!-- ===============================================-->
+
+
+  <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <iframe class="rounded" style="width:100%;height:500px;" src="https://www.youtube.com/embed/_lhdhL4UDIo"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===============================================-->
+  <!--    JavaScripts-->
+  <!-- ===============================================-->
+  <script src="vendors/@popperjs/popper.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/is/is.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+  <script src="vendors/fontawesome/all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", loadOrders);
+
+    const orderForm = document.getElementById("orderForm");
+    const orderTable = document.getElementById("orderTable");
+    const exportCSVBtn = document.getElementById("exportCSV");
+
+    let currentLocation = "Not Set";
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            currentLocation = `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`;
+            document.getElementById(
+              "locationStatus"
+            ).innerHTML = `<a href="${currentLocation}" target="_blank">📍 View Location</a>`;
+          },
+          () => {
+            alert("Location access denied. Please allow location.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    orderForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let total = parseFloat(document.getElementById("price").value);
+      // let paid = parseFloat(document.getElementById("amountPaid").value);
+      let paymentInput = parseFloat(document.getElementById("amountPaid").value) || 0;
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      let editIndex = document.getElementById("editIndex").value;
+      let accumilatedPayment = 0;
+
+      if (editIndex !== "") {
+        accumilatedPayment = parseFloat(orders[editIndex].amountPaid) + paymentInput;
+      } else {
+        accumilatedPayment = paymentInput;
+      }
+      let balance = total - accumilatedPayment;
+
+      let status;
+      if (balance === total) {
+        status = "Not Paid, pending";
+      } else if (balance > 0) {
+        status = "Partially Paid";
+      } else if (balance == 0) {
+        status = "Paid";
+      }
+
+      let newOrder = {
+        sellerName: document.getElementById("sellerName").value,
+        shopName: document.getElementById("shopName").value,
+        clientName: document.getElementById("clientName").value,
+        dateAcquired: document.getElementById("dateAcquired").value,
+        dateOfDelivery: document.getElementById("dateOfDelivery").value,
+        clientPhone: document.getElementById("clientPhone").value,
+        product: document.getElementById("product").value,
+        quantity: document.getElementById("quantity").value,
+        price: total,
+        amountPaid: accumilatedPayment,
+        balance: balance,
+        status: status,
+        area: document.getElementById("area").value,
+        // recurring: document.getElementById("recurring").checked,
+        location: currentLocation,
+      };
+
+      if (editIndex !== "") {
+        orders[editIndex] = newOrder;
+      } else {
+        orders.push(newOrder);
+        playSuccessSound();
+      }
+
+      localStorage.setItem("orders", JSON.stringify(orders));
+
+      orderForm.reset();
+      document.getElementById("editIndex").value = "";
+      document.getElementById("locationStatus").textContent = "Location not set";
+      currentLocation = "Not Set";
+      loadOrders();
+
+      scrollToTable();
+    });
+
+    function loadOrders() {
+      orderTable.innerHTML = "";
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+      // Get filter values
+      let ambassadorFilter = document.getElementById("filterAmbassador").value.toLowerCase();
+      let shopFilter = document.getElementById("filterShop").value.toLowerCase();
+      let locationFilter = document.getElementById("filterLocation").value.toLowerCase();
+      let balanceFilter = document.getElementById("filterBalance").value;
+      let phoneFilter = document.getElementById("filterPhone").value.toLowerCase();
+      let clientFilter = document.getElementById("filterClient").value.toLowerCase();
+      let statusFilter = document.getElementById("filterStatus").value;
+      let dateFilter = document.getElementById("filterDate").value;
+
+      // Filter orders based on input
+      let filteredOrders = orders.filter(order => {
+        return (
+          (!ambassadorFilter || order.sellerName.toLowerCase().includes(ambassadorFilter)) &&
+          (!shopFilter || order.shopName.toLowerCase().includes(shopFilter)) &&
+          (!locationFilter || order.location.toLowerCase().includes(locationFilter)) &&
+          (!phoneFilter || order.clientPhone.toLowerCase().includes(phoneFilter)) &&
+          (!clientFilter || order.clientName.toLowerCase().includes(clientFilter)) &&
+          (!statusFilter || order.status === statusFilter) &&
+          (!balanceFilter || eval(order.balance + balanceFilter)) && // e.g. ">0"
+          (!dateFilter || order.deliveryDate === dateFilter)
+        );
+      });
+
+
+
+      filteredOrders.forEach((order, index) => {
+        let bgColor = order.status === "Paid" ? "d4edda" : order.status === "Partially Paid" ? "#fff3cd" : "#f8d7da";
+        let row = document.createElement("tr");
+        row.style.backgroundColor = bgColor;
+        if (order.location = "Not Set") {
+          order.location = order.area;
+        }
+
+        row.innerHTML = `
+            <td>${order.sellerName}</td>
+            <td>${order.product}</td>
+            <td>${order.shopName}</td>
+            <td><a href="${order.location}" target="_blank" style="text-decoration:none">${order.location}</a></td>
+            <td>${order.quantity}</td>
+            <td>Ksh ${order.price}</td>
+            <td style="color: ${order.balance > 100 ? 'red' : 'green'};">ksh ${order.balance}</td>
+            <td>Ksh ${order.amountPaid}</td>
+            <td>${order.clientPhone}</td>
+            <td>${order.clientName}</td>
+            <td>${order.status}</td>
+            <td>${order.dateAcquired}</td>
+            <td>${order.dateOfDelivery}</td>
+            <td>
+                <button onclick="updateOrder(${index})" style="text-decoration:none;border-radius:7px; color:green;border:none">edit</button>
+                <button onclick="deleteOrder(${index})" style="text-decoration:none;border-radius:7px; color:red;border:none">delete</button>
+                <button onclick="recurOrder(${index})" style="text-decoration:none;border-radius:7px; color:blue;border:none">recur</button>
+                <button onclick="delivered(${index})" style="text-decoration:none;border-radius:7px; color:purple;border:none">delivered</button>
+                <button onclick="completeOrder(${index})" style="text-decoration:none;border-radius:7px; color:blue;border:none">complete</button>
+              </td>
+        `;
+        orderTable.appendChild(row);
+      });
+
+      predictRestocking();
+    }
+
+    function applyFilters() {
+      loadOrders(); // Reload orders with filters applied
+      scrollToTable();
+    }
+
+    function resetFilters() {
+      document.getElementById("filterAmbassador").value = "";
+      document.getElementById("filterShop").value = "";
+      document.getElementById("filterLocation").value = "";
+      document.getElementById("filterBalance").value = "";
+      document.getElementById("filterPhone").value = "";
+      document.getElementById("filterClient").value = "";
+      document.getElementById("filterStatus").value = "";
+      document.getElementById("filterDate").value = "";
+      loadOrders(); // Reload orders with no filters
+      scrollToTable();
+    }
+
+    function recurOrder(index) {
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      let order = orders[index];
+
+      document.getElementById("sellerName").value = order.sellerName;
+      document.getElementById("editIndex").value = "";
+      document.getElementById("shopName").value = order.shopName;
+      document.getElementById("clientName").value = order.clientName;
+      document.getElementById("dateAcquired").value = order.dateAcquired;
+      document.getElementById("dateOfDelivery").value = order.dateOfDelivery;
+      document.getElementById("clientPhone").value = order.clientPhone;
+      document.getElementById("quantity").value = order.quantity;
+      document.getElementById("area").value = order.area;
+
+      scrollToForm();
+    }
+
+    function delivered(index) {
+      let orders = JSON.parse(localStorage.getItem('orders')) || [];
+      let order = orders[index];
+
+      order.status = "Delivered";
+      orders[index] = order;
+      localStorage.setItem('orders', JSON.stringify(orders));
+      loadOrders();
+    }
+    function updateStatus(index, newStatus) {
+      let orders = JSON.parse(localStorage.getItem("orders"));
+      orders[index].status = newStatus;
+      localStorage.setItem("orders", JSON.stringify(orders));
+      loadOrders();
+    }
+
+    function deleteOrder(index) {
+      let orders = JSON.parse(localStorage.getItem("orders"));
+      orders.splice(index, 1);
+      localStorage.setItem("orders", JSON.stringify(orders));
+      loadOrders();
+    }
+
+    function updateOrder(index) {
+      let orders = JSON.parse(localStorage.getItem("orders"));
+      let order = orders[index];
+
+      document.getElementById("sellerName").value = order.sellerName;
+      document.getElementById("editIndex").value = index;
+      document.getElementById("shopName").value = order.shopName;
+      document.getElementById("clientName").value = order.clientName;
+      document.getElementById("dateAcquired").value = order.dateAcquired;
+      document.getElementById("dateOfDelivery").value = order.dateOfDelivery;
+      document.getElementById("clientPhone").value = order.clientPhone;
+      document.getElementById("quantity").value = order.quantity;
+      document.getElementById("area").value = order.area;
+      document.getElementById("product").value = order.product;
+      document.getElementById("quantity").value = order.quantity;
+      document.getElementById("price").value = order.price;
+      document.getElementById("amountPaid").value = "";
+      document.getElementById("status").value = order.status;
+
+      scrollToForm();
+    }
+
+    function completeOrder(index) {
+      let orders = JSON.parse(localStorage.getItem('orders')) || [];
+      let order = orders[index];
+
+      order.amountPaid = order.price;
+      order.balance = 0;
+      order.status = "Paid";
+
+      orders[index] = order;
+      localStorage.setItem('orders', JSON.stringify(orders));
+      loadOrders();
+      playCashSound();
+    }
+
+    exportCSVBtn.addEventListener("click", function () {
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      let csvContent =
+        "data:text/csv;charset=utf-8,Seller,Shop,Client,Phone,Product,Quantity,Price,Status,Location\n";
+
+      orders.forEach((order) => {
+        csvContent += `${order.sellerName},${order.shopName},${order.clientName},${order.clientPhone},${order.product},${order.quantity},${order.price},${order.status},${order.location}\n`;
+      });
+
+      let encodedUri = encodeURI(csvContent);
+      let link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "orders.csv");
+      document.body.appendChild(link);
+      link.click();
+    });
+
+    function predictRestocking() {
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      let restockClients = {};
+
+      orders.forEach(order => {
+        if (!restockClients[order.clientName]) {
+          restockClients[order.clientName] = { count: 0, lastOrder: new Date(order.date || new Date()) };
+        }
+        restockClients[order.clientName].count++;
+        restockClients[order.clientName].lastOrder = new Date(order.date || new Date());
+      });
+
+      let today = new Date();
+      let restockList = document.getElementById("restockList");
+      restockList.innerHTML = "";
+
+      Object.keys(restockClients).forEach(client => {
+        let lastOrderDate = restockClients[client].lastOrder;
+        let daysSinceLastOrder = Math.floor((today - lastOrderDate) / (1000 * 60));
+
+        if (daysSinceLastOrder >= 1) {
+          let listItem = document.createElement("li");
+          listItem.textContent = `${client} may need restocking (Last order : ${daysSinceLastOrder} days ago)`;
+          restockList.appendChild(listItem);
+        }
+      });
+    }
+
+    function scrollToForm() {
+      document.querySelector(
+        ".form-container"
+      ).scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToTable() {
+      document.querySelector(
+        ".table-container"
+      ).scrollIntoView({ behavior: "smooth" });
+    }
+
+    function playCashSound() {
+      let audio = new Audio("cash-register-sound.mp3");
+      audio.play();
+    }
+
+    function playSuccessSound() {
+      let audio = new Audio('success.mp3');
+      audio.play();
+    }
+  </script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap"
+    rel="stylesheet">
+</body>
+
+</html>
